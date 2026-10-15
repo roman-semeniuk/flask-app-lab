@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-4 resume-container">
+    <section class="section-card mb-4">
+        <h1 class="h3 fw-bold text-dark border-bottom pb-2 mb-3">Контактна інформація</h1>
+        <p class="text-secondary mb-4">
+            Якщо у вас є запитання, пропозиції щодо співпраці чи навчальних проєктів, ви можете скористатися формою для зворотного зв'язку або зв'язатися через вказані контакти.
+        </p>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <p class="mb-2"><strong>Локація:</strong> м. Івано-Франківськ, Україна</p>
+                <p class="mb-2"><strong>Email:</strong> stepan.melnyk.dev@example.com</p>
+            </div>
+            <div class="col-md-6">
+                <p class="mb-2"><strong>Telegram:</strong> @stepan_melnyk_dev</p>
+                <p class="mb-2"><strong>GitHub:</strong> github.com/stepan-melnyk</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2 class="h4 fw-bold text-dark border-bottom pb-2 mb-3">Зворотний зв'язок</h2>
+        <form action="#" method="get">
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Ваше ім'я</label>
+                    <input type="text" class="form-control" id="name" placeholder="Іван" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Електронна пошта</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="subject" class="form-label">Тема</label>
+                <input type="text" class="form-control" id="subject" placeholder="Тема повідомлення" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Повідомлення</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Ваше повідомлення..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Надіслати</button>
+        </form>
+    </section>
+</div>
+{% endblock %}
