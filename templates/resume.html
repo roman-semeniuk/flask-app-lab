@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-4 resume-container">
+    <nav aria-label="Розділи резюме" class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+        <a href="#about" class="nav-anchor-link">Про себе</a>
+        <a href="#skills" class="nav-anchor-link">Навички</a>
+        <a href="#projects" class="nav-anchor-link">Досвід і проєкти</a>
+        <a href="#education" class="nav-anchor-link">Освіта</a>
+    </nav>
+
+    <section id="about" class="text-center mb-5">
+        <img src="{{ url_for('static', filename='images/photo.jpg') }}"
+             alt="Фото профілю"
+             class="profile-photo mb-3">
+        <h1 class="h2 fw-bold mb-1">Степан Мельник</h1>
+        <p class="text-primary fw-medium mb-3">Trainee / Junior Python (Flask) Developer</p>
+        <p class="text-secondary mx-auto bio-text">
+            Студент програмної інженерії, сфокусований на бекенд-розробці на Python. Маю практичний досвід створення
+            CRUD-додатків на Flask, роботи з реляційними базами даних та верстки за стандартами HTML5/Bootstrap. Шукаю
+            першу позицію або стажування.
+        </p>
+    </section>
+
+    <section id="skills" class="section-card">
+        <h2 class="h5 fw-bold text-dark border-bottom pb-2 mb-3">Технології та навички</h2>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="skill-badge">Python 3</span>
+            <span class="skill-badge">Flask</span>
+            <span class="skill-badge">SQLite / PostgreSQL</span>
+            <span class="skill-badge">SQLAlchemy</span>
+            <span class="skill-badge">Git &amp; GitHub</span>
+            <span class="skill-badge">Jinja2</span>
+            <span class="skill-badge">REST API basics</span>
+            <span class="skill-badge">HTML5 &amp; CSS3</span>
+            <span class="skill-badge">Bootstrap 5</span>
+        </div>
+        <ul class="list-unstyled row g-2 small text-secondary mb-0">
+            <li class="col-md-6">&bull; Проєктування базових схем БД та написання SQL-запитів</li>
+            <li class="col-md-6">&bull; Розробка маршрутів, валідація вхідних даних та обробка форм</li>
+            <li class="col-md-6">&bull; Налаштування шаблонізації та компонентної структури вебсторінок</li>
+            <li class="col-md-6">&bull; Робота з гілками у Git, вирішення базових конфліктів</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section-card">
+        <h2 class="h5 fw-bold text-dark border-bottom pb-2 mb-3">Проєкти та практичний досвід</h2>
+
+        <div class="mb-4">
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h3 class="h6 fw-bold mb-1">Портфоліо-резюме на Flask</h3>
+                <span class="badge bg-secondary-subtle text-secondary small">2026</span>
+            </div>
+            <p class="small text-muted mb-2">Стек: Python, Flask, Jinja2, Bootstrap 5</p>
+            <p class="small text-secondary mb-0">
+                Багатосторінковий вебдодаток з модульною структурою шаблонів, окремими сервісними маршрутами та повною
+                адаптивністю під мобільні екрани.
+            </p>
+        </div>
+
+        <div>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h3 class="h6 fw-bold mb-1">Вебдодаток для нотаток / задач (CRUD)</h3>
+                <span class="badge bg-secondary-subtle text-secondary small">2025</span>
+            </div>
+            <p class="small text-muted mb-2">Стек: Flask, SQLite, WTForms</p>
+            <p class="small text-secondary mb-0">
+                Навчальний проєкт із реалізацією збереження записів у базі даних, реєстрацією користувачів, фільтрацією
+                списку та валідацією полів форм.
+            </p>
+        </div>
+    </section>
+
+    <section id="education" class="section-card">
+        <h2 class="h5 fw-bold text-dark border-bottom pb-2 mb-3">Освіта</h2>
+        <div>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h3 class="h6 fw-bold mb-0">Прикарпатський національний університет</h3>
+                <span class="text-muted small">2022 &mdash; 2026</span>
+            </div>
+            <p class="small text-muted mb-1">Факультет математики та інформатики | Бакалавр</p>
+            <p class="small text-secondary mb-0">
+                Спеціальність: «Інженерія програмного забезпечення». Основний фокус: структури даних, алгоритми, бази
+                даних та ООП.
+            </p>
+        </div>
+    </section>
+</div>
+{% endblock %}
