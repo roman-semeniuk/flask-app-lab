@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="p-5 mb-4 bg-light rounded-3 shadow-sm border">
+        <div class="container-fluid py-2">
+            <h1 class="display-6 fw-bold">Головна сторінка</h1>
+            <p class="fs-5 text-secondary">Веб-додаток на Flask із модульною структурою.</p>
+            <hr class="my-4">
+            <div class="card border-0 bg-white shadow-sm p-4">
+                <h2 class="h5 fw-bold text-dark mb-3">Інформація про клієнтський браузер</h2>
+                <p class="text-muted small mb-2">Значення об'єкта request.user_agent:</p>
+                <div class="alert alert-secondary font-monospace mb-0 text-break">
+                    {{ agent }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
