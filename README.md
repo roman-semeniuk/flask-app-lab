@@ -1,17 +1,22 @@
-# Lab 3 screenshots #
+# Lab 4 screenshots #
 
-## Homepage: ##
-<img width="1919" height="972" alt="webPy3 1" src="https://github.com/user-attachments/assets/6c2e5017-a1f2-4f8c-aa47-a19c1440dbd8" />
+## Wrong login\password: ##
+<img width="1919" height="933" alt="webPy4 1" src="https://github.com/user-attachments/assets/9bc2a064-09ba-432f-9628-5cddeea18ee2" />
 
-## НІ Admin age\no age: ##
-<img width="1727" height="952" alt="webPy3 2" src="https://github.com/user-attachments/assets/5b064713-02d0-4645-8853-e729a7942d70" />
+## Successful login: ##
+<img width="1919" height="974" alt="webPy4 2" src="https://github.com/user-attachments/assets/8a73385a-de77-4744-95ab-3566945f565a" />
 
-<img width="1728" height="949" alt="webPy3 3" src="https://github.com/user-attachments/assets/582006f4-8966-4f16-9f5b-6ed5497fec25" />
+## Add cookie: ##
+<img width="1918" height="973" alt="webPy4 3" src="https://github.com/user-attachments/assets/a879fc0b-6180-42d9-8465-d068a5b3d689" />
 
-## Products\products detailed: ##
-<img width="1723" height="955" alt="webPy3 4" src="https://github.com/user-attachments/assets/1037e06f-a0da-42e5-8f2e-c95c9e6000f6" />
+## Delete all cookies: ##
+<img width="1919" height="968" alt="webPy4 4" src="https://github.com/user-attachments/assets/60a5e354-4bd4-488d-bcff-fed378e1fca6" />
 
-<img width="1719" height="956" alt="webPy3 5" src="https://github.com/user-attachments/assets/8cee25f2-83d5-4446-8c60-34fa28396675" />
+## Dark theme: ##
+<img width="1919" height="971" alt="webPy4 5" src="https://github.com/user-attachments/assets/8bb6d89c-e45d-45a8-94a7-a521ac0707dc" />
+
+## Cookies table: ##
+<img width="1919" height="975" alt="webPy4 6" src="https://github.com/user-attachments/assets/5914e894-6949-43f1-bfe8-8093983a7471" />
 
 ## Unittests: ##
-<img width="1098" height="337" alt="webPy3 6" src="https://github.com/user-attachments/assets/8563ba39-c153-4e39-8983-ba96e1186b05" />
+<img width="1013" height="389" alt="webPy4 7" src="https://github.com/user-attachments/assets/61689c5f-8ea1-42a4-ad67-6452f49cde3b" />
