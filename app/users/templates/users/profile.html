@@ -2,19 +2,34 @@
 
 {% block title %}{{ title }}{% endblock %}
 
+{% block body_attrs %}{% if color_scheme == 'dark' %} class="profile-dark" data-bs-theme="dark"{% else %} data-bs-theme="light"{% endif %}{% endblock %}
+
 {% block content %}
 <div class="container py-4">
-    <div class="card border-0 shadow-sm p-4 mb-4">
+    <div class="card shadow-sm p-4 mb-4">
         <div class="bg-primary text-white rounded p-3 mb-3">
             <h1 class="h3 fw-bold mb-0">Ласкаво просимо до сторінки профілю, {{ username }}!</h1>
         </div>
-        <p class="text-secondary mb-3">Тут ви можете отримати інформацію та вийти з системи.</p>
-        <form action="{{ url_for('users.logout') }}" method="post">
-            <button type="submit" class="btn btn-danger">Вийти</button>
-        </form>
+        <p class="text-secondary mb-3">Тут ви можете отримати інформацію, керувати кукі та вийти з системи.</p>
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <form action="{{ url_for('users.logout') }}" method="post">
+                <button type="submit" class="btn btn-danger">Вийти</button>
+            </form>
+            <div class="d-flex align-items-center gap-2">
+                <span class="small fw-semibold">Кольорова схема:</span>
+                <a href="{{ url_for('users.set_color', scheme='light') }}"
+                   class="btn btn-sm {% if color_scheme == 'light' %}btn-primary{% else %}btn-outline-secondary{% endif %}">
+                    Світла
+                </a>
+                <a href="{{ url_for('users.set_color', scheme='dark') }}"
+                   class="btn btn-sm {% if color_scheme == 'dark' %}btn-primary{% else %}btn-outline-secondary{% endif %}">
+                    Темна
+                </a>
+            </div>
+        </div>
     </div>
 
-    <div class="card border-0 shadow-sm p-4 mb-4">
+    <div class="card shadow-sm p-4 mb-4">
         <h2 class="h5 fw-bold mb-3">Додати кукі</h2>
         <form action="{{ url_for('users.add_cookie') }}" method="post">
             <div class="row g-3 mb-3">
@@ -36,7 +51,7 @@
         </form>
     </div>
 
-    <div class="card border-0 shadow-sm p-4 mb-4">
+    <div class="card shadow-sm p-4 mb-4">
         <h2 class="h5 fw-bold mb-3">Видалити кукі за ключем</h2>
         <form action="{{ url_for('users.delete_cookie') }}" method="post">
             <div class="mb-3">
@@ -47,18 +62,18 @@
         </form>
     </div>
 
-    <div class="card border-0 shadow-sm p-4 mb-4">
+    <div class="card shadow-sm p-4 mb-4">
         <h2 class="h5 fw-bold mb-3">Видалити всі кукі</h2>
         <form action="{{ url_for('users.delete_all_cookies') }}" method="post">
             <button type="submit" class="btn btn-danger">Видалити всі кукі</button>
         </form>
     </div>
 
-    <div class="card border-0 shadow-sm p-4">
+    <div class="card shadow-sm p-4">
         <h2 class="h5 fw-bold mb-3">Список всіх кукі</h2>
         <div class="table-responsive">
             <table class="table table-bordered table-striped align-middle mb-0">
-                <thead class="table-light">
+                <thead>
                 <tr>
                     <th scope="col">Ключ</th>
                     <th scope="col">Значення</th>

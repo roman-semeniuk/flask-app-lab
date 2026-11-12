@@ -38,12 +38,33 @@ def profile():
     if "username" not in session:
         flash("Для доступу до профілю потрібно увійти в систему.", "danger")
         return redirect(url_for("users.login"))
+    color_scheme = request.cookies.get("color_scheme", "light")
+    if color_scheme not in ("light", "dark"):
+        color_scheme = "light"
     return render_template(
         "profile.html",
         title="Профіль",
         username=session["username"],
         cookies=request.cookies,
+        color_scheme=color_scheme,
     )
+
+
+@users_bp.route("/set_color/<string:scheme>")
+def set_color(scheme):
+    if "username" not in session:
+        flash("Для доступу до профілю потрібно увійти в систему.", "danger")
+        return redirect(url_for("users.login"))
+
+    if scheme not in ("light", "dark"):
+        flash("Невідома кольорова схема.", "danger")
+        return redirect(url_for("users.profile"))
+
+    scheme_label = "темну" if scheme == "dark" else "світлу"
+    flash(f"Обрано {scheme_label} кольорову схему.", "success")
+    response = make_response(redirect(url_for("users.profile")))
+    response.set_cookie("color_scheme", scheme, max_age=30 * 24 * 60 * 60)
+    return response
 
 
 @users_bp.route("/add_cookie", methods=["POST"])
